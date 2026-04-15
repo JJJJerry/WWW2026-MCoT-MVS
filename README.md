@@ -1,4 +1,12 @@
-# MCoT-MVS
+<div align="center">
+	
+# MCoT-MVS: Multi-level Vision Selection by Multi-modal Chain-of-Thought Reasoning for Composed Image Retrieval (WWW2026 Oral)
+
+[![arXiv](https://img.shields.io/badge/arXiv-2603.17360-b31b1b.svg)](https://arxiv.org/pdf/2603.17360)
+[![ACM](https://img.shields.io/badge/ACM-Digital%20Library-007A5E.svg)](https://dl.acm.org/doi/10.1145/3774904.3792287)
+[![License](https://img.shields.io/badge/License-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+</div>
 
 ## Installation
 
@@ -97,7 +105,20 @@ data/
 
 ## Training
 
-The training code will be made public after the paper is accepted. 
+```bash
+cd src
+# cirr
+CUDA_VISIBLE_DEVICES=<device_id> python train.py --dataset cirr --loss_weight 100.0
+
+# fiq
+CUDA_VISIBLE_DEVICES=<device_id> python train.py --dataset dress --loss_weight 10.0
+
+CUDA_VISIBLE_DEVICES=<device_id> python train.py --dataset shirt --loss_weight 10.0
+
+CUDA_VISIBLE_DEVICES=<device_id> python train.py --dataset toptee --loss_weight 10.0
+```
+
+
 ---
 
 ## Inference
